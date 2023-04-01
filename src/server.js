@@ -6,6 +6,9 @@ import userRoutes from './routes/userRoute.js'
 const app = express()
 const port = 3000
 
+app.use(express.json())
+
+
 db.sync(() => console.log('Banco de dados preparado'))
 
 app.use('/users', userRoutes)
